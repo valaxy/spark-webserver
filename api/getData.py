@@ -2,6 +2,7 @@
 # 获取自定服务器时间的数据
 
 from tornado.websocket import *
+import state
 
 
 class GetDataHandler(WebSocketHandler):
@@ -15,7 +16,7 @@ class GetDataHandler(WebSocketHandler):
         })
 
     def check_origin(self, origin):
-        return True
+        return True  # 关闭同源策略
 
 
 
